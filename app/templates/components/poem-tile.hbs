@@ -1,0 +1,13 @@
+<h2>{{model.title}}</h2>
+<h4>{{model.author}}</h4>
+<p>
+  {{model.date}}
+</p>
+<div class="">
+  {{#each model.content as |line|}}
+  <p>
+      {{line}}
+  </p>
+  {{/each}}
+</div>
+<hr>
