@@ -4,10 +4,19 @@
   {{model.date}}
 </p>
 <div class="">
-  {{#each model.content as |line|}}
+  {{#each model.lines as |line|}}
   <p>
       {{line}}
   </p>
   {{/each}}
+</div>
+<div class="">
+  <ul>
+    {{#each model.tags as |new-tag|}}
+    <li>
+      {{new-tag}}
+    </li>
+    {{/each}}
+  </ul>
 </div>
 <hr>

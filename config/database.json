@@ -2,14 +2,14 @@
     "date": "03/21/2017",
     "title": "On Poetry",
     "author": "Antonio Banderas",
-    "content": ["This is the first line", "this one makes a rhyme in time", "it's really too bad"],
+    "lines": ["This is the first line", "this one makes a rhyme in time", "it's really too bad"],
     "tags": ["great poems", "rhyming", "famous"],
     "category": "haiku"
   }, {
     "date": "01/02/2003",
     "title": "Pretty",
     "author": "Eva Mendez",
-    "content": [
+    "lines": [
           "I am so pretty",
           "oh so pretty",
           "oh so pretty",

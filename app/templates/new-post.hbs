@@ -9,11 +9,14 @@
   </div>
   <div class="form-group">
     <label for="content">Make your post</label>
-    {{textarea rows="20" cols="100" class="form-control" value=content id="content"}}
+    {{log title}}
+    {{log "Above is title, below is content"}}
+    {{log content}}
+    {{textarea rows="20" cols="100" class="form-control" value=lines id="content"}}
   </div>
   <div class="form-group">
     <label for="tags">Tags</label>
     {{input class="form-control" value=tags id="tags"}}
   </div>
-  <button type="button" class="btn btn-success" {{action 'savePost'}}>Make your post</button>
+  <button type="button" class="btn btn-success">Make your post</button>
 </form>
