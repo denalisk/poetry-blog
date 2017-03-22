@@ -18,5 +18,17 @@
     ],
     "tags": ["famous", "classics"],
     "category": "basic bitches"
-  }]
+  }],
+  "categories": [{
+      "name": "basic bitches"
+    }, {
+      "name": "haiku"
+    }, {
+      "name": "sonnet"
+    }, {
+      "name": "epic"
+    }, {
+      "name": "lorem ipsum"
+    }
+  ]
 }

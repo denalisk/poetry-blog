@@ -1,6 +1,12 @@
 <h1>Home Page</h1>
-<div>
-  {{#each model as |entry|}}
-    {{poem-tile model=entry}}
-  {{/each}}
+<div class="col-md-3">
+  {{log model}}
+  {{side-bar categories=model.categories}}
+</div>
+<div class="col-md-9">
+  <div>
+    {{#each model.posts as |entry|}}
+      {{poem-tile model=entry}}
+    {{/each}}
+  </div>
 </div>
