@@ -1,8 +1,15 @@
 import Ember from 'ember';
 
+// checkCategories(modelCategories) {
+//   for
+// }
+
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
+    return Ember.RSVP.hash ({
+      posts: this.store.findAll('post'),
+      categories: this.store.findAll('category')
+    });
   },
 
   actions: {
@@ -14,8 +21,9 @@ export default Ember.Route.extend({
         title: this.controller.get('title'),
         lines: this.controller.get('lines').split("\n"),
         tags: this.controller.get('tags').split(', '),
-        category: 'default'
-      }
+        category: this.controller.get('category')
+      };
+
       var newPost = this.store.createRecord('post', params);
       newPost.save();
       this.transitionTo('index');
