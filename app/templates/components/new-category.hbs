@@ -1,0 +1,11 @@
+{{#if creatingCategory}}
+  <form>
+    <div class="form-group">
+      <label for="name">New Category</label>
+      {{input class="form-control" value=name id="name"}}
+    </div>
+    <button class="btn btn-primary" {{action 'saveCategory'}} type="button" name="button">Save Category</button>
+  </form>
+{{else}}
+  <button class="btn btn-info" {{action 'makeNewCategory'}} type="button" name="button">Create New Category</button>
+{{/if}}

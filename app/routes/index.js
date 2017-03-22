@@ -6,5 +6,12 @@ export default Ember.Route.extend({
       posts: this.store.findAll('post'),
       categories: this.store.findAll('category')
     });
+  },
+  actions: {
+    saveCategory(params) {
+      var newCategory = this.store.createRecord('category', params);
+      newCategory.save();
+      this.transitionTo('index');
+    }
   }
 });
