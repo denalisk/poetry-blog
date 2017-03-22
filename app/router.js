@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('create-post');
+  this.route('category', {path: '/category/:category_id'});
 });
 
 export default Router;

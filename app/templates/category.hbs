@@ -1,0 +1,15 @@
+<h1>Home Page</h1>
+<div class="col-md-3">
+  {{log model}}
+  {{side-bar categories=model.categories}}
+  {{new-category model=model.categories saveCategory='saveCategory'}}
+</div>
+<div class="col-md-9">
+  <div>
+    {{log model}}
+    {{log model.category}}
+    {{#each model.posts as |entry|}}
+      {{poem-tile model=entry}}
+    {{/each}}
+  </div>
+</div>
