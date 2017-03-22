@@ -12,7 +12,8 @@
     {{textarea rows="20" cols="100" class="form-control" value=content id="content"}}
   </div>
   <div class="form-group">
-    <label for="tags">Make your post</label>
+    <label for="tags">Tags</label>
     {{input class="form-control" value=tags id="tags"}}
   </div>
+  <button type="button" class="btn btn-success" {{action 'savePost'}}>Make your post</button>
 </form>
