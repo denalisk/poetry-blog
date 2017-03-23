@@ -17,10 +17,10 @@ module.exports = function(environment) {
       }
     },
     firebase: {
-      apiKey: "AIzaSyCBdRYzVhs-8DIR06AXoZ_0NBPbOn0-7cA",
-      authDomain: "blog-8d246.firebaseapp.com",
-      databaseURL: "https://blog-8d246.firebaseio.com",
-      storageBucket: "blog-8d246.appspot.com"
+      apiKey: "AIzaSyCHtqscTgYPjcgqEkTKC1DyUUiJj7NHRYg",
+      authDomain: "poetry-blog.firebaseapp.com",
+      databaseURL: "https://poetry-blog.firebaseio.com",
+      storageBucket: "poetry-blog.appspot.com",
     },
 
     APP: {
