@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('create-post');
   this.route('category', {path: '/category/:category_id'});
+  this.route('special');
 });
 
 export default Router;

@@ -1,23 +1,28 @@
-<h2>{{model.title}}</h2>
-<h4>{{model.author}}</h4>
-<p>
-  {{model.date}}
-</p>
-<div class="">
-  {{#each model.lines as |line|}}
+<div class="col-md-6">
+  <h2>{{model.title}}</h2>
+  <h4>{{model.author}}</h4>
   <p>
-      {{line}}
+    {{model.date}}
   </p>
-  {{/each}}
-</div>
-<div class="">
-  <ul>
-    {{#each model.tags as |new-tag|}}
-    <li>
-      {{new-tag}}
-    </li>
+  <div class="">
+    {{#each model.lines as |line|}}
+    <p>
+      {{line}}
+    </p>
     {{/each}}
-  </ul>
-  <p>Category: {{model.category}}</p>
+  </div>
+  <div class="">
+    <ul>
+      {{#each model.tags as |new-tag|}}
+      <li>
+        {{new-tag}}
+      </li>
+      {{/each}}
+    </ul>
+    <p>Category: {{model.category}}</p>
+  </div>
+  <hr>
 </div>
-<hr>
+<div class="col-md-6">
+  {{edit-post}}
+</div>
