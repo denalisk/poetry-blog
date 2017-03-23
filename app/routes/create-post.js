@@ -14,21 +14,21 @@ export default Ember.Route.extend({
 
   actions: {
     savePost() {
-      // var params = {
-      //   author: this.controller.get('author'),
-      //   date: moment().format("MM/DD/YYYY"),
-      //   title: this.controller.get('title'),
-      //   lines: this.controller.get('lines').split("\n"),
-      //   tags: this.controller.get('tags').split(', '),
-      //   category: this.controller.get('category')
-      // };
-
+      var store = this.store;
+      var params = {
+        author: this.controller.get('author'),
+        date: moment().format("MM/DD/YYYY"),
+        title: this.controller.get('title'),
+        lines: this.controller.get('lines').split("\n"),
+        tags: this.controller.get('tags').split(', '),
+        category: this.controller.get('category')
+      };
       var categoryParams = {
         name: this.controller.get('category')
       };
-      var store = this.store;
-      //
-      // var newPost = this.store.createRecord('post', params);
+
+      var newPost = this.store.createRecord('post', params);
+
       this.store.query('category', { orderBy: "name", equalTo: this.controller.get('category').toString(), limit: 1})
       .then(function(result) {
         if(!(result.get('length') > 0)) {
@@ -39,9 +39,8 @@ export default Ember.Route.extend({
           console.log("That entry already exists");
         }
       });
-      // console.log(newCategory.get('id'));
-      // newPost.save();
-      // this.transitionTo('index');
+      newPost.save();
+      this.transitionTo('index');
     }
   }
 });
